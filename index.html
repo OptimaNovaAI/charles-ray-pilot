@@ -131,7 +131,7 @@
     <div class="drow">
       <div class="dnum">01</div>
       <div class="dbody">
-        <div class="dtitlerow"><span class="dtitle">Prompt Library</span><span class="badge grow">29 prompts · growing weekly</span></div>
+        <div class="dtitlerow"><span class="dtitle">Prompt Library</span><span class="badge grow">39 prompts · growing weekly</span></div>
         <div class="ddesc">Every prompt from your daily tips plus the moves from our sessions. Search it, star your favorites, copy with one tap.</div>
       </div>
       <div class="darrow">&rarr;</div>
@@ -218,7 +218,8 @@
     var week = Math.floor((now - start) / (7 * 24 * 60 * 60 * 1000)) + 1;
     if (week < 1) week = 1;
     var done = false;
-    if (week > 8) { week = 8; done = true; }
+    if (week > 8) week = 8;
+    done = now >= new Date(2026, 7, 19);
     var phase = Math.ceil(week / 2);
     document.getElementById('weekline').textContent = done ? 'Pilot complete · 8 of 8' : ('Week ' + week + ' of 8 · Phase ' + phase);
     var pct = done ? 100 : Math.round(((week - 1) / 8) * 100);
