@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>New Leads · Charles A. Ray Law</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#07090F; --surface:rgba(255,255,255,.028); --hair:rgba(255,255,255,.09);
+    --tx:#EDF1F8; --blue:#4F93D6; --mag:#D838C5; --green:#33D69B; --gold:#E2A95C;
+    --red:#E2685C;
+    --grad:linear-gradient(100deg,#4F93D6,#D838C5);
+    --disp:'Space Grotesk','Inter',sans-serif;
+    --sans:'Inter',-apple-system,sans-serif;
+    --mono:'IBM Plex Mono',monospace;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--tx);font-family:var(--sans);
+       -webkit-font-smoothing:antialiased;line-height:1.6}
+  .wrap{max-width:860px;margin:0 auto;padding:34px 20px 80px}
+
+  .back{display:inline-block;font-family:var(--mono);font-size:10px;letter-spacing:1.2px;
+        text-transform:uppercase;color:rgba(237,241,248,.5);text-decoration:none;
+        border:1px solid var(--hair);border-radius:8px;padding:7px 12px;margin-bottom:26px;
+        transition:.18s}
+  .back:hover{color:var(--tx);border-color:rgba(216,56,197,.4)}
+
+  .top{margin-bottom:30px}
+  .k{font-family:var(--mono);font-size:10px;letter-spacing:1.6px;text-transform:uppercase;
+     color:var(--mag);font-weight:600;margin-bottom:9px}
+  h1{font-family:var(--disp);font-size:34px;font-weight:600;letter-spacing:-.6px;
+     margin:0 0 10px;line-height:1.15}
+  .sub{color:rgba(237,241,248,.62);font-size:15px;max-width:62ch;margin:0}
+  .a{font-family:var(--mono);font-size:10px;letter-spacing:1.1px;text-transform:uppercase;
+     color:rgba(237,241,248,.35);margin-top:14px}
+
+  /* counts */
+  .counts{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:26px 0 30px}
+  .ct{background:var(--surface);border:1px solid var(--hair);border-radius:14px;
+      padding:15px 16px}
+  .ctn{font-family:var(--disp);font-size:27px;font-weight:600;line-height:1;
+       letter-spacing:-.5px}
+  .ctl{font-family:var(--mono);font-size:9px;letter-spacing:.9px;text-transform:uppercase;
+       color:rgba(237,241,248,.45);margin-top:7px}
+  .t1 .ctn{color:#F0918A} .t2 .ctn{color:#EE8FE0}
+  .rg .ctn{color:#EDCB98} .dc .ctn{color:rgba(237,241,248,.5)}
+
+  .seclbl{font-family:var(--mono);font-size:10px;letter-spacing:1.5px;text-transform:uppercase;
+          color:rgba(237,241,248,.42);margin:0 0 13px;font-weight:600}
+
+  /* a lead, same bones as a door */
+  .lead{display:block;background:var(--surface);border:1px solid var(--hair);
+        border-radius:16px;padding:18px 20px;margin-bottom:11px;position:relative;
+        overflow:hidden;box-shadow:0 12px 44px -28px rgba(0,0,0,.85)}
+  .lead::before{content:"";position:absolute;left:0;top:0;bottom:0;width:2px;
+                background:var(--grad);opacity:0;transition:.18s}
+  .lead.tier1::before,.lead.gate::before{opacity:1}
+  .lrow{display:flex;align-items:flex-start;gap:15px}
+  .lnum{font-family:var(--mono);font-size:11px;font-weight:600;flex-shrink:0;width:52px;
+        padding-top:2px;letter-spacing:.4px}
+  .tier1 .lnum{color:#F0918A} .tier2 .lnum{color:#EE8FE0}
+  .tier3 .lnum,.tier4 .lnum{color:rgba(237,241,248,.4)}
+  .gate .lnum{color:#EDCB98} .declined .lnum{color:rgba(237,241,248,.3)}
+  .lbody{flex:1;min-width:0}
+  .ltitlerow{display:flex;align-items:center;gap:9px;flex-wrap:wrap;margin-bottom:5px}
+  .ltitle{font-family:var(--disp);font-size:16px;font-weight:600;color:#fff;
+          letter-spacing:-.15px}
+  .ldesc{color:rgba(237,241,248,.6);font-size:14px;margin:0}
+  .lmeta{font-family:var(--mono);font-size:10px;letter-spacing:.7px;text-transform:uppercase;
+         color:rgba(237,241,248,.32);margin-top:8px}
+  .declined{opacity:.62}
+
+  .badge{font-family:var(--mono);font-size:9px;letter-spacing:.8px;text-transform:uppercase;
+         font-weight:600;padding:4px 8px;border-radius:6px;white-space:nowrap}
+  .badge.t1{background:rgba(226,104,92,.12);color:#F0918A;border:1px solid rgba(226,104,92,.3)}
+  .badge.t2{background:rgba(216,56,197,.12);color:#EE8FE0;border:1px solid rgba(216,56,197,.3)}
+  .badge.t3,.badge.t4{background:rgba(255,255,255,.05);color:rgba(237,241,248,.55);
+                      border:1px solid var(--hair)}
+  .badge.gate{background:rgba(226,169,92,.12);color:#EDCB98;border:1px solid rgba(226,169,92,.3)}
+  .badge.src{background:rgba(79,147,214,.1);color:#93C0E8;border:1px solid rgba(79,147,214,.26)}
+
+  .empty{background:var(--surface);border:1px dashed var(--hair);border-radius:16px;
+         padding:34px 22px;text-align:center;color:rgba(237,241,248,.45);font-size:14px}
+
+  .note{background:var(--surface);border:1px solid var(--hair);border-left:2px solid var(--blue);
+        border-radius:12px;padding:15px 18px;margin-top:26px;
+        color:rgba(237,241,248,.58);font-size:13.5px}
+  .note b{color:rgba(237,241,248,.85);font-weight:600}
+
+  .foot{font-family:var(--mono);font-size:9.5px;letter-spacing:.9px;text-transform:uppercase;
+        color:rgba(237,241,248,.28);margin-top:40px;padding-top:18px;
+        border-top:1px solid var(--hair);line-height:1.9}
+
+  @media(max-width:640px){
+    .counts{grid-template-columns:repeat(2,1fr)}
+    h1{font-size:27px}
+    .lnum{width:44px}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <a class="back" href="./">&larr; Back to your hub</a>
+
+  <div class="top">
+    <div class="k">Qualification Engine · Live</div>
+    <h1>New leads</h1>
+    <p class="sub">Every lead that reached your inbox, read on arrival and scored
+    against your rubric before you opened it. Names and case numbers stay in
+    Outlook. The full card is in your email.</p>
+    <div class="a" id="stamp">Loading&hellip;</div>
+  </div>
+
+  <div class="counts">
+    <div class="ct t1"><div class="ctn" id="c1">&mdash;</div><div class="ctl">Tier 1 · call today</div></div>
+    <div class="ct t2"><div class="ctn" id="c2">&mdash;</div><div class="ctl">Tier 2 · strong</div></div>
+    <div class="ct rg"><div class="ctn" id="cg">&mdash;</div><div class="ctl">Review gate</div></div>
+    <div class="ct dc"><div class="ctn" id="cd">&mdash;</div><div class="ctl">Out of practice</div></div>
+  </div>
+
+  <div class="seclbl">This week</div>
+  <div id="list">
+    <div class="empty">Loading&hellip;</div>
+  </div>
+
+  <div class="note" id="declinenote" style="display:none"></div>
+
+  <div class="foot">
+    Sanitized view · no client names, no matter numbers, no case references<br>
+    Scored against Lead Scoring Rubric v2 · Prepared by OptimaNova AI
+  </div>
+</div>
+
+<script>
+// The flow writes leads.json into this directory. Sanitized summaries only.
+// Shape: {generated:"2026-08-29T06:30:00-04:00", window:"last 7 days",
+//         leads:[{tier:1, review_gate:false, headline:"", summary:"",
+//                 source:"fft", matter_type:"", jurisdiction:"", arrived:"",
+//                 decision:"score"}]}
+
+const SRC = {
+  fft:'Friedman Framme', legalmatch:'LegalMatch', avvo:'Avvo',
+  martindale:'Martindale', answering:'Answering service', calendly:'Calendly'
+};
+const LABEL = {1:'Call today', 2:'Strong', 3:'Admin only', 4:'Nurture'};
+
+function esc(s){
+  return String(s == null ? '' : s).replace(/[&<>"']/g,
+    c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+}
+
+function card(l){
+  const declined = l.decision === 'decline';
+  const gate = !!l.review_gate;
+  const cls = declined ? 'declined' : (gate ? 'gate' : 'tier' + (l.tier || 4));
+  const num = declined ? 'OUT' : (gate ? 'GATE' : 'TIER ' + l.tier);
+
+  let badge = '';
+  if (declined)   badge = '<span class="badge t4">Out of practice</span>';
+  else if (gate)  badge = '<span class="badge gate">$250 review first</span>';
+  else            badge = '<span class="badge t' + l.tier + '">' +
+                          esc(LABEL[l.tier] || '') + '</span>';
+
+  const meta = [
+    SRC[l.source] || l.source,
+    l.jurisdiction,
+    l.matter_type,
+    l.arrived
+  ].filter(Boolean).map(esc).join(' &nbsp;·&nbsp; ');
+
+  return '<div class="lead ' + cls + '">' +
+    '<div class="lrow">' +
+      '<div class="lnum">' + num + '</div>' +
+      '<div class="lbody">' +
+        '<div class="ltitlerow"><span class="ltitle">' +
+          esc(l.headline || l.matter_type || 'Lead') + '</span>' + badge + '</div>' +
+        '<p class="ldesc">' + esc(l.summary || '') + '</p>' +
+        (meta ? '<div class="lmeta">' + meta + '</div>' : '') +
+      '</div>' +
+    '</div>' +
+  '</div>';
+}
+
+function render(d){
+  const all = Array.isArray(d.leads) ? d.leads : [];
+  const scored = all.filter(l => l.decision !== 'decline');
+  const declined = all.filter(l => l.decision === 'decline');
+
+  document.getElementById('c1').textContent =
+    scored.filter(l => l.tier === 1 && !l.review_gate).length;
+  document.getElementById('c2').textContent =
+    scored.filter(l => l.tier === 2 && !l.review_gate).length;
+  document.getElementById('cg').textContent =
+    scored.filter(l => l.review_gate).length;
+  document.getElementById('cd').textContent = declined.length;
+
+  const when = d.generated
+    ? new Date(d.generated).toLocaleString('en-US',
+        {weekday:'long', month:'long', day:'numeric', hour:'numeric', minute:'2-digit'})
+    : '';
+  document.getElementById('stamp').textContent =
+    (d.window ? d.window.toUpperCase() + ' · ' : '') +
+    (when ? 'UPDATED ' + when.toUpperCase() : '');
+
+  // Tier order, then review gate, then declines last.
+  const rank = l => l.decision === 'decline' ? 90 : (l.review_gate ? 2.5 : (l.tier || 5));
+  all.sort((a, b) => rank(a) - rank(b));
+
+  document.getElementById('list').innerHTML = all.length
+    ? all.map(card).join('')
+    : '<div class="empty">No new leads in this window.<br>' +
+      'The engine is running. Nothing arrived.</div>';
+
+  if (declined.length) {
+    const bySrc = {};
+    declined.forEach(l => { bySrc[SRC[l.source] || l.source] =
+      (bySrc[SRC[l.source] || l.source] || 0) + 1; });
+    const parts = Object.entries(bySrc)
+      .sort((a, b) => b[1] - a[1])
+      .map(([s, n]) => esc(s) + ' (' + n + ')').join(', ');
+    const n = document.getElementById('declinenote');
+    n.style.display = 'block';
+    n.innerHTML = '<b>' + declined.length + ' lead' +
+      (declined.length === 1 ? '' : 's') +
+      ' outside the practice this window.</b> From ' + parts +
+      '. These reached your inbox and were screened out before they reached ' +
+      'your calendar. Worth watching: a source that sends mostly out-of-scope ' +
+      'work is a subscription question, not a scoring question.';
+  }
+}
+
+fetch('leads.json', {cache:'no-store'})
+  .then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })
+  .then(render)
+  .catch(() => {
+    document.getElementById('list').innerHTML =
+      '<div class="empty">The feed has not published yet.<br>' +
+      'Your email card is unaffected and still arrives on every lead.</div>';
+    document.getElementById('stamp').textContent = 'FEED NOT YET PUBLISHED';
+    ['c1','c2','cg','cd'].forEach(i =>
+      document.getElementById(i).textContent = '0');
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+{
+  "generated": "2026-08-29T06:30:00-04:00",
+  "window": "Last 7 days",
+  "leads": [
+    {"decision":"score","tier":1,"review_gate":false,
+     "headline":"Maryland income appeal, hearing in 9 days",
+     "summary":"Comptroller applied hobby-loss rules to Schedule C losses. Hearing date named in the notice. Documents already assembled.",
+     "source":"fft","jurisdiction":"MD","matter_type":"Income tax appeal","arrived":"Thu"},
+    {"decision":"score","tier":2,"review_gate":false,
+     "headline":"IRS balance, client tried on their own first",
+     "summary":"Above the floor, decisive language, no forcing event this week. Worth a consult on your schedule.",
+     "source":"answering","jurisdiction":"DC","matter_type":"Collection","arrived":"Wed"},
+    {"decision":"score","tier":2,"review_gate":true,
+     "headline":"Real liability, fee-capped source",
+     "summary":"Past the floor with modest urgency. Source caps the fee, so the $250 review comes before calendar time.",
+     "source":"legalmatch","jurisdiction":"VA","matter_type":"Income","arrived":"Wed"},
+    {"decision":"decline","gate":"practice_area",
+     "headline":"Family law",
+     "summary":"Divorce and custody, with a trial date. Outside the practice.",
+     "source":"martindale","jurisdiction":"DC","matter_type":"Family law","arrived":"Tue"},
+    {"decision":"decline","gate":"practice_area",
+     "headline":"Business formation",
+     "summary":"Terms of use and disclaimer review for an online subscription business.",
+     "source":"avvo","matter_type":"Corporate","arrived":"Mon"},
+    {"decision":"decline","gate":"jurisdiction",
+     "headline":"Property tax, Pennsylvania",
+     "summary":"Assessment dispute in Allegheny County. Neither the practice area nor the jurisdiction.",
+     "source":"legalmatch","jurisdiction":"PA","matter_type":"Property tax","arrived":"Mon"}
+  ]
+}

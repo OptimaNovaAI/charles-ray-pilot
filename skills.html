@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Your Skills · Charles A. Ray Law</title>
+<style>
+  :root{
+    --bg:#08080c; --card:#101017; --line:#1e1e29;
+    --ink:#ffffff; --dim:#9a9aac; --faint:#6a6a7c;
+    --mag:#ca25b7; --pink:#e451cf; --blue:#5b8dd9; --green:#3ecf8e;
+    --mono:ui-monospace,SFMono-Regular,"SF Mono",Menlo,monospace;
+    --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Arial,sans-serif;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);
+       -webkit-font-smoothing:antialiased}
+  .wrap{max-width:900px;margin:0 auto;padding:34px 22px 90px}
+
+  .top{display:flex;justify-content:space-between;align-items:center;
+       padding-bottom:38px}
+  .brand{display:flex;align-items:center;gap:11px;font-weight:600;font-size:16px}
+  .mark{width:30px;height:30px;border-radius:50%;border:1.5px solid #3a3a4a;
+        display:flex;align-items:center;justify-content:center;font-size:13px;
+        font-weight:700;color:#d8d8e4}
+  .brand b{font-weight:600}
+  .brand .n{color:var(--pink)}
+  .firm{font-family:var(--mono);font-size:11px;letter-spacing:2.2px;
+        color:var(--faint);text-transform:uppercase}
+
+  .back{display:inline-block;font-family:var(--mono);font-size:11px;
+        letter-spacing:1.6px;color:var(--faint);text-decoration:none;
+        text-transform:uppercase;padding-bottom:22px}
+  .back:hover{color:var(--pink)}
+
+  .kicker{font-family:var(--mono);font-size:11.5px;letter-spacing:2.4px;
+          color:var(--blue);text-transform:uppercase;padding-bottom:14px}
+  h1{margin:0 0 14px;font-size:44px;line-height:1.06;letter-spacing:-1.2px;
+     font-weight:600}
+  .lede{color:var(--dim);font-size:16.5px;line-height:1.6;max-width:600px;
+        margin:0 0 12px}
+  .note{color:var(--faint);font-size:14px;line-height:1.6;max-width:600px;
+        margin:0 0 38px}
+
+  .seclbl{font-family:var(--mono);font-size:11px;letter-spacing:2.4px;
+          color:var(--faint);text-transform:uppercase;
+          border-bottom:1px solid var(--line);padding-bottom:11px;
+          margin:0 0 20px}
+
+  .skill{background:var(--card);border:1px solid var(--line);border-radius:13px;
+         padding:22px 24px;margin-bottom:14px}
+  .srow{display:flex;gap:20px;align-items:flex-start}
+  .snum{font-family:var(--mono);font-size:12px;color:var(--mag);padding-top:4px;
+        min-width:24px}
+  .sbody{flex:1;min-width:0}
+  .stitlerow{display:flex;align-items:center;gap:11px;flex-wrap:wrap;
+             padding-bottom:7px}
+  .stitle{font-size:19px;font-weight:600;letter-spacing:-0.3px}
+  .item{font-family:var(--mono);font-size:10.5px;letter-spacing:1.2px;
+        text-transform:uppercase;padding:4px 9px;border-radius:20px;
+        border:1px solid rgba(202,37,183,.4);color:var(--pink);
+        background:rgba(202,37,183,.09);white-space:nowrap}
+  .sdesc{color:var(--dim);font-size:15px;line-height:1.62;margin:0 0 14px}
+  .say{font-family:var(--mono);font-size:13px;color:#c8c8d8;
+       background:#16161f;border:1px solid var(--line);border-left:2px solid var(--blue);
+       border-radius:0 7px 7px 0;padding:10px 14px;margin-bottom:14px;
+       line-height:1.55}
+  .say i{color:var(--faint);font-style:normal;display:block;font-size:10.5px;
+         letter-spacing:1.5px;text-transform:uppercase;padding-bottom:5px}
+  .dl{display:inline-block;font-family:var(--mono);font-size:11.5px;
+      letter-spacing:1.4px;text-transform:uppercase;text-decoration:none;
+      color:#0d0d12;background:var(--pink);padding:9px 17px;border-radius:7px;
+      font-weight:600}
+  .dl:hover{background:#f06ade}
+
+  .running{background:transparent;border:1px dashed var(--line);
+           border-radius:13px;padding:20px 24px;margin-bottom:14px}
+  .rrow{display:flex;gap:14px;align-items:baseline;padding:7px 0;
+        border-bottom:1px solid rgba(255,255,255,.04)}
+  .rrow:last-child{border-bottom:0}
+  .rname{font-size:15px;font-weight:600;flex:1}
+  .rwhat{color:var(--faint);font-size:13.5px;flex:2;line-height:1.5}
+
+  .how{background:var(--card);border:1px solid var(--line);border-radius:13px;
+       padding:24px 26px;margin-top:34px}
+  .how h3{margin:0 0 12px;font-size:16px;font-weight:600}
+  .how ol{margin:0;padding-left:20px;color:var(--dim);font-size:15px;
+          line-height:1.75}
+  .how code{font-family:var(--mono);font-size:13px;color:#c8c8d8;
+            background:#16161f;padding:2px 6px;border-radius:4px}
+
+  .foot{color:var(--faint);font-size:13px;line-height:1.6;padding-top:40px;
+        border-top:1px solid var(--line);margin-top:44px}
+
+  @media(max-width:620px){
+    h1{font-size:32px}
+    .srow{gap:13px}
+    .rrow{flex-direction:column;gap:3px}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="top">
+    <div class="brand">
+      <div class="mark">N</div>
+      <b>Optima<span class="n">Nova</span> AI</b>
+    </div>
+    <div class="firm">Charles A. Ray Law</div>
+  </div>
+
+  <a class="back" href="./">&larr; Back to your hub</a>
+
+  <div class="kicker">Intake-to-Compliance Multiplier &middot; Your Skills</div>
+  <h1>What Claude knows<br>how to do for you.</h1>
+  <p class="lede">Each one below is a skill you install once. After that, you
+  ask for it in plain language and Claude runs it.</p>
+  <p class="note">The tag on each card names the item it answers in the
+  May 16 proposal, so this page doubles as the running record of what has been
+  delivered against that list.</p>
+
+  <div class="seclbl">Install these &middot; four skills</div>
+
+  <div class="skill">
+    <div class="srow">
+      <div class="snum">01</div>
+      <div class="sbody">
+        <div class="stitlerow">
+          <span class="stitle">Power of Attorney autofill</span>
+          <span class="item">Pilot &middot; Section 4</span>
+        </div>
+        <p class="sdesc">Fills the IRS 2848, the DC D-2848, the Maryland 548,
+        or the Virginia PAR 101, whichever the matter calls for. Your attorney
+        block, bar numbers, and CAF number are already in every master. It
+        refuses to file a blank or general matter description, and it will tell
+        you when the years on the form do not cover the years in the
+        engagement.</p>
+        <div class="say"><i>Say</i>Fill the IRS POA for this matter, Form 1040, 2018 through 2022.</div>
+        <a class="dl" href="skills/charles-ray-poa-skill-v3.zip" download>Download</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="skill">
+    <div class="srow">
+      <div class="snum">02</div>
+      <div class="sbody">
+        <div class="stitlerow">
+          <span class="stitle">Lead dossier</span>
+          <span class="item">Group A &middot; Item 3</span>
+        </div>
+        <p class="sdesc">The one-page workup before you pick up the phone. The
+        prospect in their own words, the seven questions with the ones they
+        already answered filled in and the rest marked to ask, and every figure
+        marked confirmed, reported, or unverified. It reports and never
+        concludes. No fee, no resolution path, no recommendation.</p>
+        <div class="say"><i>Say</i>Build me a dossier on this lead. [paste the lead card or the message]</div>
+        <a class="dl" href="skills/charles-ray-dossier-skill.zip" download>Download</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="skill">
+    <div class="srow">
+      <div class="snum">03</div>
+      <div class="sbody">
+        <div class="stitlerow">
+          <span class="stitle">Public record pass</span>
+          <span class="item">Group A &middot; Item 2</span>
+        </div>
+        <p class="sdesc">Liens, court records, and business filings across DC,
+        Maryland, and Virginia, plus federal courts and bankruptcy. A name match
+        stays a possible match until a second element agrees. It never reads an
+        empty result as a clean record, and it never builds a financial picture
+        out of public documents.</p>
+        <div class="say"><i>Say</i>Run the public record on this prospect.</div>
+        <a class="dl" href="skills/charles-ray-enrichment-skill.zip" download>Download</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="skill">
+    <div class="srow">
+      <div class="snum">04</div>
+      <div class="sbody">
+        <div class="stitlerow">
+          <span class="stitle">Letterhead and matter opening</span>
+          <span class="item">Group B &middot; Items 9 and 12</span>
+        </div>
+        <p class="sdesc">Letters, memoranda, and services agreements on your
+        letterhead. Ask it to open a matter and it produces the agreement, names
+        the power of attorney that travels with it, and drafts the transmittal.
+        Your LawPay link is carried through. Bracketed passages are left open
+        for your drafting and it will not call a package finished while one is
+        unwritten.</p>
+        <div class="say"><i>Say</i>Open a matter for this client, investigative, Form 1040 for 2018 through 2022.</div>
+        <a class="dl" href="skills/charles-ray-letterhead-skill.zip" download>Download</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="seclbl">Already running &middot; nothing to install</div>
+
+  <div class="running">
+    <div class="rrow">
+      <div class="rname">Qualification engine</div>
+      <div class="rwhat">Reads and scores every lead the moment it arrives,
+      before you open it. Sends a card with a reply and a call button.</div>
+    </div>
+    <div class="rrow">
+      <div class="rname">Decline with grace &nbsp;<span class="item">Group A &middot; Item 4</span></div>
+      <div class="rwhat">When a real lead falls outside the practice, the card
+      carries a short note pointing the person somewhere useful. One tap sends it.</div>
+    </div>
+    <div class="rrow">
+      <div class="rname">Morning Brief</div>
+      <div class="rwhat">Weekday docket review in your inbox at 6:30, ranked by
+      exposure rather than recency.</div>
+    </div>
+    <div class="rrow">
+      <div class="rname">Callback Close-Out</div>
+      <div class="rwhat">End of day. What came in, what is still open, what is
+      waiting on someone else.</div>
+    </div>
+  </div>
+
+  <div class="how">
+    <h3>Installing a skill takes about a minute</h3>
+    <ol>
+      <li>Download the file above. It stays a <code>.zip</code>, do not unzip it.</li>
+      <li>In Claude, open <b>Settings</b>, then <b>Capabilities</b>, then <b>Skills</b>.</li>
+      <li>Choose <b>Upload skill</b> and pick the file.</li>
+      <li>Start a new chat and ask for it in the words shown on the card.</li>
+    </ol>
+  </div>
+
+  <div class="foot">
+    Client names, matter numbers, and case details never appear on this page.
+    Everything here describes what the tools do, not who they were run for.
+  </div>
+
+</div>
+</body>
+</html>
