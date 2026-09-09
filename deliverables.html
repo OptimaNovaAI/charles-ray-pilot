@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Deliverables · Charles A. Ray Law</title>
+<style>
+  :root{
+    --bg:#08080c; --card:#101017; --line:#1e1e29;
+    --ink:#ffffff; --dim:#9a9aac; --faint:#6a6a7c;
+    --mag:#ca25b7; --pink:#e451cf; --blue:#5b8dd9;
+    --green:#3ecf8e; --amber:#d9a441;
+    --mono:ui-monospace,SFMono-Regular,"SF Mono",Menlo,monospace;
+    --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Arial,sans-serif;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);
+       -webkit-font-smoothing:antialiased}
+  .wrap{max-width:900px;margin:0 auto;padding:34px 22px 90px}
+
+  .top{display:flex;justify-content:space-between;align-items:center;padding-bottom:38px}
+  .brand{display:flex;align-items:center;gap:11px;font-weight:600;font-size:16px}
+  .mark{width:30px;height:30px;border-radius:50%;border:1.5px solid #3a3a4a;
+        display:flex;align-items:center;justify-content:center;font-size:13px;
+        font-weight:700;color:#d8d8e4}
+  .brand .n{color:var(--pink)}
+  .firm{font-family:var(--mono);font-size:11px;letter-spacing:2.2px;
+        color:var(--faint);text-transform:uppercase}
+
+  .back{display:inline-block;font-family:var(--mono);font-size:11px;
+        letter-spacing:1.6px;color:var(--faint);text-decoration:none;
+        text-transform:uppercase;padding-bottom:22px}
+  .back:hover{color:var(--pink)}
+
+  .kicker{font-family:var(--mono);font-size:11.5px;letter-spacing:2.4px;
+          color:var(--blue);text-transform:uppercase;padding-bottom:14px}
+  h1{margin:0 0 14px;font-size:44px;line-height:1.06;letter-spacing:-1.2px;font-weight:600}
+  .lede{color:var(--dim);font-size:16.5px;line-height:1.6;max-width:620px;margin:0 0 30px}
+
+  .meter{background:var(--card);border:1px solid var(--line);border-radius:13px;
+         padding:20px 24px;margin-bottom:34px}
+  .mrow{display:flex;justify-content:space-between;align-items:baseline;
+        padding-bottom:12px}
+  .mlbl{font-family:var(--mono);font-size:11px;letter-spacing:2.2px;
+        color:var(--faint);text-transform:uppercase}
+  .mval{font-family:var(--mono);font-size:11px;letter-spacing:1.6px;color:var(--green)}
+  .bar{height:5px;background:#1a1a24;border-radius:4px;overflow:hidden}
+  .fill{height:100%;width:33.3%;
+        background:linear-gradient(90deg,var(--blue),var(--pink));border-radius:4px}
+
+  .seclbl{font-family:var(--mono);font-size:11px;letter-spacing:2.4px;
+          color:var(--faint);text-transform:uppercase;
+          border-bottom:1px solid var(--line);padding-bottom:11px;margin:34px 0 6px}
+  .seclbl:first-of-type{margin-top:0}
+
+  .item{display:flex;gap:16px;align-items:flex-start;padding:15px 4px;
+        border-bottom:1px solid rgba(255,255,255,.045)}
+  .item:last-child{border-bottom:0}
+  .box{min-width:19px;height:19px;border-radius:5px;margin-top:2px;
+       display:flex;align-items:center;justify-content:center;
+       font-size:12px;font-weight:700;line-height:1}
+  .done{background:var(--green);color:#08080c;border:1px solid var(--green)}
+  .open{background:transparent;border:1px solid #33334a;color:transparent}
+  .block{background:transparent;border:1px solid #4a3a2a;color:var(--amber);
+         font-size:10px}
+  .ibody{flex:1;min-width:0}
+  .ihead{display:flex;align-items:baseline;gap:9px;flex-wrap:wrap}
+  .inum{font-family:var(--mono);font-size:11.5px;color:var(--mag);min-width:20px}
+  .iname{font-size:16px;font-weight:600;letter-spacing:-0.2px}
+  .iname.d{color:var(--ink)}
+  .iname.o{color:#c2c2d2}
+  .when{font-family:var(--mono);font-size:10.5px;letter-spacing:1.2px;
+        text-transform:uppercase;padding:3px 8px;border-radius:20px;white-space:nowrap}
+  .w-done{color:var(--green);border:1px solid rgba(62,207,142,.35);
+          background:rgba(62,207,142,.08)}
+  .w-date{color:var(--blue);border:1px solid rgba(91,141,217,.35);
+          background:rgba(91,141,217,.07)}
+  .w-block{color:var(--amber);border:1px solid rgba(217,164,65,.35);
+           background:rgba(217,164,65,.07)}
+  .inote{color:var(--faint);font-size:13.5px;line-height:1.55;padding-top:5px}
+
+  .extra{background:transparent;border:1px dashed var(--line);border-radius:13px;
+         padding:8px 22px;margin-top:8px}
+
+  .foot{color:var(--faint);font-size:13px;line-height:1.65;padding-top:34px;
+        border-top:1px solid var(--line);margin-top:44px}
+
+  @media(max-width:620px){
+    h1{font-size:32px}
+    .item{gap:12px}
+    .iname{font-size:15px}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="top">
+    <div class="brand"><div class="mark">N</div><b>Optima<span class="n">Nova</span> AI</b></div>
+    <div class="firm">Charles A. Ray Law</div>
+  </div>
+
+  <a class="back" href="./">&larr; Back to your hub</a>
+
+  <div class="kicker">Intake-to-Compliance Multiplier &middot; Deliverables</div>
+  <h1>The list, and<br>where each one stands.</h1>
+  <p class="lede">Fifteen items from Section 4 of the May 16 proposal, in your
+  numbering. Checked when it is built, tested, and in your hands.</p>
+
+  <div class="meter">
+    <div class="mrow">
+      <div class="mlbl">Delivered</div>
+      <div class="mval">5 of 15</div>
+    </div>
+    <div class="bar"><div class="fill"></div></div>
+  </div>
+
+  <div class="seclbl">Group A &middot; eight items</div>
+
+  <div class="item">
+    <div class="box done">&check;</div>
+    <div class="ibody"><div class="ihead"><span class="inum">01</span>
+      <span class="iname d">Seven-question intake protocol</span>
+      <span class="when w-done">Delivered Sep 8</span></div>
+      <div class="inote">Your questions, in your order, amount first. Live in the
+      dossier and in the scoring engine.</div></div>
+  </div>
+
+  <div class="item">
+    <div class="box done">&check;</div>
+    <div class="ibody"><div class="ihead"><span class="inum">02</span>
+      <span class="iname d">Public-data enrichment</span>
+      <span class="when w-done">Delivered Sep 8</span></div>
+      <div class="inote">Liens, court records, and business filings across DC,
+      Maryland, and Virginia, plus federal courts and bankruptcy.</div></div>
+  </div>
+
+  <div class="item">
+    <div class="box done">&check;</div>
+    <div class="ibody"><div class="ihead"><span class="inum">03</span>
+      <span class="iname d">The dossier</span>
+      <span class="when w-done">Delivered Sep 8</span></div>
+      <div class="inote">The one-page workup before you dial. Reports and never
+      concludes.</div></div>
+  </div>
+
+  <div class="item">
+    <div class="box done">&check;</div>
+    <div class="ibody"><div class="ihead"><span class="inum">04</span>
+      <span class="iname d">Decline with grace</span>
+      <span class="when w-done">Delivered Sep 8</span></div>
+      <div class="inote">Runs inside the qualification engine. Now forks:
+      bankruptcy with a tax component gets the $500 analysis offer instead of a
+      decline.</div></div>
+  </div>
+
+  <div class="item">
+    <div class="box open">&check;</div>
+    <div class="ibody"><div class="ihead"><span class="inum">05</span>
+      <span class="iname o">Compliance check engine</span>
+      <span class="when w-date">Sep 18</span></div>
+      <div class="inote">Reads the transcripts you save from e-Services and
+      reports filing and payment status by year, with the source lines cited.</div></div>
+  </div>
+
+  <div class="item">
+    <div class="box open">&check;</div>
+    <div class="ibody"><div class="ihead"><span class="inum">06</span>
+      <span class="iname o">Resolution path</span>
+      <span class="when w-date">Sep 25</span></div>
+      <div class="inote">Computes and never recommends. Shows which paths the
+      arithmetic opens and closes, every input visible and sourced.</div></div>
+  </div>
+
+  <div class="item">
+    <div class="box open">&check;</div>
+    <div class="ibody"><div class="ihead"><span class="inum">07</span>
+      <span class="iname o">Blind-spot flagging</span>
+      <span class="when w-date">Oct 2</span></div>
+      <div class="inote">Two conditions confirmed Sep 8: whether the statutory
+      notice went to the last known address, and where the statute stands on the
+      older years.</div></div>
+  </div>
+
+  <div class="item">
+    <div class="box open">&check;</div>
+    <div class="ibody"><div class="ihead"><span class="inum">08</span>
+      <span class="iname o">Wrap session and playbook</span>
+      <span class="when w-date">Week of Oct 6</span></div></div>
+  </div>
+
+  <div class="seclbl">Group B &middot; seven items</div>
+
+  <div class="item">
+    <div class="box open">&check;</div>
+    <div class="ibody"><div class="ihead"><span class="inum">09</span>
+      <span class="iname o">POA e-signature and submission tracking</span>
+      <span class="when w-date">Date at next call</span></div>
+      <div class="inote">Adobe Sign for the signature, eFax confirmations for
+      the tracking. Never needed CARET.</div></div>
+  </div>
+
+  <div class="item">
+    <div class="box block">&#9679;</div>
+    <div class="ibody"><div class="ihead"><span class="inum">10</span>
+      <span class="iname o">IRS call companion</span>
+      <span class="when w-block">Waiting on Elevate</span></div>
+      <div class="inote">Three questions with Washington Works since Sep 8,
+      answer due Thursday. Whether Elevate can record, on your extension, and
+      where the file lands.</div></div>
+  </div>
+
+  <div class="item">
+    <div class="box block">&#9679;</div>
+    <div class="ibody"><div class="ihead"><span class="inum">11</span>
+      <span class="iname o">Client email summary</span>
+      <span class="when w-block">Follows item 10</span></div>
+      <div class="inote">If the call produces the notes, the summary drafts from
+      them.</div></div>
+  </div>
+
+  <div class="item">
+    <div class="box done">&check;</div>
+    <div class="ibody"><div class="ihead"><span class="inum">12</span>
+      <span class="iname d">Retainer agreement with payment link</span>
+      <span class="when w-done">Delivered Sep 8</span></div>
+      <div class="inote">Agreement on your letterhead, the right power of
+      attorney named for the jurisdiction, transmittal drafted, your LawPay link
+      carried through.</div></div>
+  </div>
+
+  <div class="item">
+    <div class="box block">&#9679;</div>
+    <div class="ibody"><div class="ihead"><span class="inum">13</span>
+      <span class="iname o">Multi-calendar sync with conflict detection</span>
+      <span class="when w-block">Waiting on CARET</span></div>
+      <div class="inote">The one item that genuinely needs CARET or whatever
+      replaces it. Their answer expected this week.</div></div>
+  </div>
+
+  <div class="item">
+    <div class="box open">&check;</div>
+    <div class="ibody"><div class="ihead"><span class="inum">14</span>
+      <span class="iname o">Hearing prep at T-7, T-3, and T-1</span>
+      <span class="when w-date">Date at next call</span></div>
+      <div class="inote">Runs off your matter dates and the Outlook calendar.</div></div>
+  </div>
+
+  <div class="item">
+    <div class="box open">&check;</div>
+    <div class="ibody"><div class="ihead"><span class="inum">15</span>
+      <span class="iname o">Day notes intelligence</span>
+      <span class="when w-date">Date at next call</span></div>
+      <div class="inote">Your day notes are in Word. This never required CARET
+      either.</div></div>
+  </div>
+
+  <div class="seclbl">Also delivered &middot; outside the fifteen</div>
+
+  <div class="extra">
+    <div class="item">
+      <div class="box done">&check;</div>
+      <div class="ibody"><div class="ihead">
+        <span class="iname d">Letterhead rebuilt</span>
+        <span class="when w-done">Sep 8</span></div>
+        <div class="inote">New layout, and five defects corrected in the master
+        the firm was using.</div></div>
+    </div>
+    <div class="item">
+      <div class="box done">&check;</div>
+      <div class="ibody"><div class="ihead">
+        <span class="iname d">Bankruptcy and tax analysis path</span>
+        <span class="when w-done">Sep 8</span></div>
+        <div class="inote">Your $500 offering, wired into the engine. A hybrid
+        lead arrives scored with the note drafted and one button to send it.</div></div>
+    </div>
+    <div class="item">
+      <div class="box done">&check;</div>
+      <div class="ibody"><div class="ihead">
+        <span class="iname d">Amount floor revised</span>
+        <span class="when w-done">Sep 8</span></div>
+        <div class="inote">$25,000 and up, a review band from $20,000, and the
+        collection-window exception for a small balance on a recent year.</div></div>
+    </div>
+  </div>
+
+  <div class="foot">
+    An item is checked when it is built, tested, and in your hands. Not when it
+    is started and not when it is nearly done. Dates move only forward on this
+    page, and if one slips you will hear it from me before you read it here.
+  </div>
+
+</div>
+</body>
+</html>
