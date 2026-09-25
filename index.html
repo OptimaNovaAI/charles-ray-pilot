@@ -252,7 +252,7 @@
     if (week < 1) week = 1;
     var done = false;
     if (week > 8) week = 8;
-    done = now >= new Date(2026, 7, 19);
+    done = now >= new Date(2026, 9, 16);
     var phase = Math.ceil(week / 2);
     document.getElementById('weekline').textContent = done ? 'Pilot complete · 8 of 8' : ('Week ' + week + ' of 8 · Phase ' + phase);
     var pct = done ? 100 : Math.round(((week - 1) / 8) * 100);
