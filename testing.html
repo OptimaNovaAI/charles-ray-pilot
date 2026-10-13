@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Test Your Skills · Charles A. Ray Law</title>
+<style>
+  :root{
+    --bg:#08080c; --card:#101017; --line:#1e1e29;
+    --ink:#ffffff; --dim:#9a9aac; --faint:#6a6a7c;
+    --mag:#ca25b7; --pink:#e451cf; --blue:#5b8dd9; --green:#3ecf8e;
+    --mono:ui-monospace,SFMono-Regular,"SF Mono",Menlo,monospace;
+    --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Arial,sans-serif;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);
+       -webkit-font-smoothing:antialiased}
+  .wrap{max-width:900px;margin:0 auto;padding:34px 22px 90px}
+
+  .top{display:flex;justify-content:space-between;align-items:center;
+       padding-bottom:38px}
+  .brand{display:flex;align-items:center;gap:11px;font-weight:600;font-size:16px}
+  .mark{width:30px;height:30px;border-radius:50%;border:1.5px solid #3a3a4a;
+        display:flex;align-items:center;justify-content:center;font-size:13px;
+        font-weight:700;color:#d8d8e4}
+  .brand b{font-weight:600}
+  .brand .n{color:var(--pink)}
+  .firm{font-family:var(--mono);font-size:11px;letter-spacing:2.2px;
+        color:var(--faint);text-transform:uppercase}
+
+  .back{display:inline-block;font-family:var(--mono);font-size:11px;
+        letter-spacing:1.6px;color:var(--faint);text-decoration:none;
+        text-transform:uppercase;padding-bottom:22px}
+  .back:hover{color:var(--pink)}
+
+  .kicker{font-family:var(--mono);font-size:11.5px;letter-spacing:2.4px;
+          color:var(--blue);text-transform:uppercase;padding-bottom:14px}
+  h1{margin:0 0 14px;font-size:44px;line-height:1.06;letter-spacing:-1.2px;
+     font-weight:600}
+  .lede{color:var(--dim);font-size:16.5px;line-height:1.6;max-width:600px;
+        margin:0 0 12px}
+  .note{color:var(--faint);font-size:14px;line-height:1.6;max-width:600px;
+        margin:0 0 38px}
+
+  .seclbl{font-family:var(--mono);font-size:11px;letter-spacing:2.4px;
+          color:var(--faint);text-transform:uppercase;
+          border-bottom:1px solid var(--line);padding-bottom:11px;
+          margin:0 0 20px}
+
+  .skill{background:var(--card);border:1px solid var(--line);border-radius:13px;
+         padding:22px 24px;margin-bottom:14px}
+  .srow{display:flex;gap:20px;align-items:flex-start}
+  .snum{font-family:var(--mono);font-size:12px;color:var(--mag);padding-top:4px;
+        min-width:24px}
+  .sbody{flex:1;min-width:0}
+  .stitlerow{display:flex;align-items:center;gap:11px;flex-wrap:wrap;
+             padding-bottom:7px}
+  .stitle{font-size:19px;font-weight:600;letter-spacing:-0.3px}
+  .item{font-family:var(--mono);font-size:10.5px;letter-spacing:1.2px;
+        text-transform:uppercase;padding:4px 9px;border-radius:20px;
+        border:1px solid rgba(202,37,183,.4);color:var(--pink);
+        background:rgba(202,37,183,.09);white-space:nowrap}
+  .sdesc{color:var(--dim);font-size:15px;line-height:1.62;margin:0 0 14px}
+  .say{font-family:var(--mono);font-size:13px;color:#c8c8d8;
+       background:#16161f;border:1px solid var(--line);border-left:2px solid var(--blue);
+       border-radius:0 7px 7px 0;padding:10px 14px;margin-bottom:14px;
+       line-height:1.55}
+  .say i{color:var(--faint);font-style:normal;display:block;font-size:10.5px;
+         letter-spacing:1.5px;text-transform:uppercase;padding-bottom:5px}
+  .dl{display:inline-block;font-family:var(--mono);font-size:11.5px;
+      letter-spacing:1.4px;text-transform:uppercase;text-decoration:none;
+      color:#0d0d12;background:var(--pink);padding:9px 17px;border-radius:7px;
+      font-weight:600}
+  .dl:hover{background:#f06ade}
+
+  .running{background:transparent;border:1px dashed var(--line);
+           border-radius:13px;padding:20px 24px;margin-bottom:14px}
+  .rrow{display:flex;gap:14px;align-items:baseline;padding:7px 0;
+        border-bottom:1px solid rgba(255,255,255,.04)}
+  .rrow:last-child{border-bottom:0}
+  .rname{font-size:15px;font-weight:600;flex:1}
+  .rwhat{color:var(--faint);font-size:13.5px;flex:2;line-height:1.5}
+
+  .how{background:var(--card);border:1px solid var(--line);border-radius:13px;
+       padding:24px 26px;margin-top:34px}
+  .how h3{margin:0 0 12px;font-size:16px;font-weight:600}
+  .how ol{margin:0;padding-left:20px;color:var(--dim);font-size:15px;
+          line-height:1.75}
+  .how code{font-family:var(--mono);font-size:13px;color:#c8c8d8;
+            background:#16161f;padding:2px 6px;border-radius:4px}
+
+  .foot{color:var(--faint);font-size:13px;line-height:1.6;padding-top:40px;
+        border-top:1px solid var(--line);margin-top:44px}
+
+  @media(max-width:620px){
+    h1{font-size:32px}
+    .srow{gap:13px}
+    .rrow{flex-direction:column;gap:3px}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="top">
+    <div class="brand">
+      <div class="mark">N</div>
+      <b>Optima<span class="n">Nova</span> AI</b>
+    </div>
+    <div class="firm">Charles A. Ray Law</div>
+  </div>
+
+  <a class="back" href="./">&larr; Back to your hub</a>
+
+  <div class="kicker">Intake-to-Compliance Multiplier &middot; Test Your Skills</div>
+  <h1>Five minutes each.<br>Tell me what looks off.</h1>
+  <p class="lede">Run the line, look at the result, and send me anything that
+  reads wrong: the skill, what you said, and what you expected. I adjust the
+  skill and it comes back to your skills page the same week.</p>
+
+  <div class="seclbl" style="margin-top:28px">Before you start &middot; three steps</div>
+  <div class="how">
+    <h3>Every Monday morning</h3>
+    <ol>
+      <li><b>Export CARET.</b> Firm Settings, Your CARET Legal Account, Export,
+      Download Data. The zip lands in Downloads. Nothing to unzip or move.</li>
+      <li><b>Install the updates once.</b> From your skills page, download Day
+      notes, Hearing prep, Calendar conflicts, and the new Playbook. In Claude,
+      Settings, Skills, Upload, and choose Replace where it asks.</li>
+      <li><b>Give Claude the folders once.</b> In a Claude chat, the + beside the
+      message box, Add folder: Downloads, then Claude AI Reports.</li>
+    </ol>
+    <p class="note" style="margin:14px 0 0">To get the Monday reminder, paste this
+    into Claude once: <i>Every Monday at 7:30 a.m., remind me to export CARET:
+    Firm Settings, Your CARET Legal Account, Export, Download Data. After I
+    export, run hearing prep and give me the playbook for the week.</i></p>
+  </div>
+
+  <div class="seclbl" style="margin-top:28px">The tests &middot; CARET export first</div>
+
+  <div class="skill">
+    <div class="srow">
+      <div class="snum">01</div>
+      <div class="sbody">
+        <div class="stitlerow">
+          <span class="stitle">Day notes</span>
+          <span class="item">Item 15</span>
+        </div>
+        <p class="sdesc">Reads your CARET notes and open tasks from the newest export.</p>
+        <div class="say"><i>Say</i>Read my CARET notes from the last 30 days and show me what's open.</div>
+        <p class="sdesc" style="margin-top:12px"><b>Look for.</b> The top line names the export and how old it is. Owed by you includes your open CARET tasks with due dates. Every entry cites its note as Notes.csv row N. Notes filed under lead show up in Conversion by source.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="skill">
+    <div class="srow">
+      <div class="snum">02</div>
+      <div class="sbody">
+        <div class="stitlerow">
+          <span class="stitle">Hearing prep</span>
+          <span class="item">Item 14</span>
+        </div>
+        <p class="sdesc">Reads Outlook and the CARET calendar, and adds each matter's tasks and notes.</p>
+        <div class="say"><i>Say</i>Run hearing prep for the next eight days.</div>
+        <p class="sdesc" style="margin-top:12px"><b>Look for.</b> Each hearing shows both sources when it sits on both calendars, the matter's open tasks, and its latest notes. A matter whose documents live in CARET says so and names the Bulk Download step.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="skill">
+    <div class="srow">
+      <div class="snum">03</div>
+      <div class="sbody">
+        <div class="stitlerow">
+          <span class="stitle">Calendar conflicts</span>
+          <span class="item">Item 13</span>
+        </div>
+        <p class="sdesc">Reads every Outlook calendar beside your CARET calendar.</p>
+        <div class="say"><i>Say</i>Check my calendars for conflicts over the next two weeks.</div>
+        <p class="sdesc" style="margin-top:12px"><b>Look for.</b> A CARET Export card with its date. Anything booked on top of a hearing, and the same event at different times in Outlook and CARET.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="skill">
+    <div class="srow">
+      <div class="snum">04</div>
+      <div class="sbody">
+        <div class="stitlerow">
+          <span class="stitle">Playbook</span>
+          <span class="item">Your October 13 standard</span>
+        </div>
+        <p class="sdesc">The first run sets the standard. Attach your examination playbook to the chat.</p>
+        <div class="say"><i>Say</i>Use this playbook as the standard. Give me the playbook for my hearings and examinations this week.</div>
+        <p class="sdesc" style="margin-top:12px"><b>Look for.</b> The same structure as yours: the setting, what changed, the issues ranked, likely question, answer, support, and cautions, with the do-nots in red. Every figure has its source. Anything the record does not carry is listed under Open Items.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="skill">
+    <div class="srow">
+      <div class="snum">05</div>
+      <div class="sbody">
+        <div class="stitlerow">
+          <span class="stitle">IRS call companion</span>
+          <span class="item">Items 10 and 11</span>
+        </div>
+        <p class="sdesc">Open a recorded IRS call MP3 in Word: Dictate, Transcribe, Upload audio, Add all to document. Attach the Word file to Claude.</p>
+        <div class="say"><i>Say</i>Write up this IRS call and draft the client update.</div>
+        <p class="sdesc" style="margin-top:12px"><b>Look for.</b> The employee, the ID number, and every commitment tied to its line of the transcript. Heard, not recorded at the bottom. The client update sits in Outlook as a draft for your review.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="skill">
+    <div class="srow">
+      <div class="snum">06</div>
+      <div class="sbody">
+        <div class="stitlerow">
+          <span class="stitle">POA tracking</span>
+          <span class="item">Item 9</span>
+        </div>
+        <p class="sdesc">Reads your transmittals, signed copies, and eFax confirmations in Outlook.</p>
+        <div class="say"><i>Say</i>Where do my POAs stand?</div>
+        <p class="sdesc" style="margin-top:12px"><b>Look for.</b> Each POA at its stage with days counted, and each eFax confirmation tied to its POA. Tell me the agency fax numbers you use if any differ.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="skill">
+    <div class="srow">
+      <div class="snum">07</div>
+      <div class="sbody">
+        <div class="stitlerow">
+          <span class="stitle">Blind-spot flags and the clock register</span>
+          <span class="item">Items 5 and 7</span>
+        </div>
+        <p class="sdesc">Run on a matter with a transcript. The register in Claude AI Reports fills in.</p>
+        <div class="say"><i>Say</i>Run the blind-spot flags on this matter.</div>
+        <p class="sdesc" style="margin-top:12px"><b>Look for.</b> Derived, IRS-printed, and controlling dates side by side in the register, and the C1 to C5 flags where they differ.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="how">
+    <h3>Send me what you find</h3>
+    <p class="note" style="margin:0">Reply to my email with the skill, what you
+    said, and what you expected. A screenshot is plenty. Nothing with a client
+    name needs to leave your machine.</p>
+  </div>
+</div>
+</body>
+</html>
